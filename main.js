@@ -5,30 +5,41 @@ const dots = [
   { userId: "usertwo", working: 1 },
   { userId: "userthree", working: 1 },
   { userId: "userthree", working: 4 },
+  { userId: "userthree", working: 5 },
+  { userId: "userfour", working: 5 },
 ];
-const resultArray = [];
+let resultArray = [];
 let currentArray = [];
 let restArray = dots;
-// console.log(restArray);
 let id = "";
-// for (let i = 0; i < 1000; i++) {
-id = restArray[0].userId;
-// console.log(id);
-currentArray = restArray.map((el) => {
-  if (el.userId === id) {
-    return el;
-  }
-});
-resultArray.push(currentArray);
-console.log(resultArray);
-restArray = restArray.map((el) => {
-  if (el.userId !== id) {
-    return el;
-  }
-});
+const useFigure = dots.length;
+for (let i = 0; i < dots.length / ; i++) {
+  id = restArray[i].userId;
+  //   console.log(id);
+  let result = dots.filter((el) => {
+    return el.userId === id;
+  });
+  //   const list = [...new Set(result)];
+  if(result)
+  console.log(result);
+}
+// console.log(result);
 
-var result = restArray.filter(function (item) {
-  return item !== undefined;
-});
-console.log(result);
+// console.log(result);
+//   currentArray = restArray.filter((el) => {
+//   });
+//   console.log(currentArray);
+//   resultArray.push(currentArray);
+//   console.log(resultArray);
+//   restArray = restArray.map((el) => {
+//     if (el.userId !== id) {
+//       return el;
+//     }
+//   });
+//   const final = restArray.filter((el) => {
+//     return el !== undefined;
+//   });
+// }
+// console.log(id);
+// console.log(resultArray);
 // console.log(restArray);
